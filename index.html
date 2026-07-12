@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>QR Code Generator</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <main class="container">
+
+     
+
+        <header class="header">
+
+            <h1>🚀 QR Code Generator</h1>
+
+            <p>
+                Generate professional QR Codes instantly.
+            </p>
+
+        </header>
+
+       
+
+        <section class="app">
+
+           
+
+            <section class="controls">
+
+<div class="card">
+
+    <h2>Generate QR</h2>
+
+    <div class="form-group">
+
+        <label for="textInput">
+
+            Enter URL or Text
+
+        </label>
+
+        <textarea
+            id="textInput"
+            placeholder="https://example.com or Hello World"
+            rows="5"></textarea>
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="sizeSelect">
+
+            QR Size
+
+        </label>
+
+        <select id="sizeSelect">
+
+            <option value="200">200 × 200</option>
+
+            <option value="300" selected>300 × 300</option>
+
+            <option value="400">400 × 400</option>
+
+            <option value="500">500 × 500</option>
+
+        </select>
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="foregroundColor">
+
+            Foreground Color
+
+        </label>
+
+        <input
+            type="color"
+            id="foregroundColor"
+            value="#000000">
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="backgroundColor">
+
+            Background Color
+
+        </label>
+
+        <input
+            type="color"
+            id="backgroundColor"
+            value="#ffffff">
+
+    </div>
+
+    <div class="button-group">
+
+        <button id="generateBtn">
+
+            Generate QR
+
+        </button>
+
+        <button id="clearBtn">
+
+            Clear
+
+        </button>
+
+    </div>
+
+</div>
+
+            </section>
+
+          
+
+            <section class="preview">
+
+
+<div class="card">
+
+    <h2>QR Preview</h2>
+
+    <div id="qrPreview"
+         class="qr-preview">
+
+        <p>
+
+            Your QR Code will appear here.
+
+        </p>
+
+    </div>
+
+    <p id="message"
+       class="message">
+
+        No QR Code Generated
+
+    </p>
+
+    <button id="downloadBtn">
+
+        Download PNG
+
+    </button>
+
+</div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script type="module"
+            src="js/script.js"></script>
+
+</body>
+
+</html>
