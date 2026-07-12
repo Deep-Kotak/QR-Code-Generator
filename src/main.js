@@ -16,10 +16,16 @@ const downloadBtn = document.getElementById("downloadBtn");
 const qrPreview = document.getElementById("qrPreview");
 const message = document.getElementById("message");
 
+let currentQRCode = "";
+downloadBtn.disabled = true;
 
 generateBtn.addEventListener("click", async() => {
 
     const input = textInput.value;
+    console.log("Input:", `"${input}"`);
+    console.log("Length:", input.length);
+    console.log("Trim Length:", input.trim().length);
+    console.log("Valid:", isValidInput(input));
 
     const size = sizeSelect.value;
 
@@ -47,6 +53,8 @@ generateBtn.addEventListener("click", async() => {
             dark,
             light
         );
+        currentQRCode = qrCode;
+        downloadBtn.disabled = false;
 
 
         qrPreview.innerHTML = `
@@ -64,5 +72,48 @@ generateBtn.addEventListener("click", async() => {
         message.textContent = "❌ Failed to generate QR Code.";
 
     }
+
+});
+clearBtn.addEventListener("click", () => {
+
+
+    textInput.value = "";
+
+
+    sizeSelect.value = "300";
+
+
+    foregroundColor.value = "#000000";
+    backgroundColor.value = "#ffffff";
+
+
+    qrPreview.innerHTML = `
+        <p>Your QR Code will appear here.</p>
+    `;
+
+
+    message.textContent = "No QR Code Generated";
+    currentQRCode = "";
+    downloadBtn.disabled = true;
+
+});
+
+downloadBtn.addEventListener("click", () => {
+
+    if (!currentQRCode) {
+
+        message.textContent = "Please generate a QR Code first.";
+
+        return;
+
+    }
+
+    const link = document.createElement("a");
+
+    link.href = currentQRCode;
+
+    link.download = "qr-code.png";
+
+    link.click();
 
 });
