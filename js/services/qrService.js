@@ -1,9 +1,12 @@
-export function generateQRCode(input) {
+import QRCode from "qrcode";
+import { isValidInput } from "../utils/validation.js";
 
-    if (input.trim().length === 0) {
+export async function generateQRCode(input) {
+
+    if (!isValidInput(input)) {
         throw new Error("Input cannot be empty");
     }
 
-    return input;
+    return await QRCode.toDataURL(input);
 
 }
