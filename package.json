@@ -1,53 +1,19 @@
 {
-
     "name": "qr-code-generator",
-
-    "version": "1.0.0",
-
-    "description": "",
-
-    "main": "index.js",
-
-    "scripts": {
-
-        "test": "vitest"
-
-    },
-
-    "repository": {
-
-        "type": "git",
-
-        "url": "git+https://github.com/Deep-Kotak/QR-Code-Generator.git"
-
-    },
-
-    "keywords": [],
-
-    "author": "",
-
-    "license": "ISC",
-
+    "version": "0.0.0",
+    "private": true,
     "type": "module",
-
-    "bugs": {
-
-        "url": "https://github.com/Deep-Kotak/QR-Code-Generator/issues"
-
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test": "vitest"
     },
-
-    "homepage": "https://github.com/Deep-Kotak/QR-Code-Generator#readme",
-
     "devDependencies": {
-
+        "vite": "^8.1.1",
         "vitest": "^4.1.10"
-
     },
-
     "dependencies": {
-
         "qrcode": "^1.5.4"
-
     }
-
 }

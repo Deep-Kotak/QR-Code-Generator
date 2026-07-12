@@ -10,160 +10,149 @@
 
     <title>QR Code Generator</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
-
 </head>
 
 <body>
 
     <main class="container">
 
-     
+       
 
         <header class="header">
 
             <h1>🚀 QR Code Generator</h1>
 
-            <p>
-                Generate professional QR Codes instantly.
-            </p>
+            <p>Generate professional QR Codes instantly.</p>
 
         </header>
 
-       
 
         <section class="app">
 
-           
+          
 
             <section class="controls">
 
-<div class="card">
+                <div class="card">
 
-    <h2>Generate QR</h2>
+                    <h2>Generate QR</h2>
 
-    <div class="form-group">
+                    <div class="form-group">
 
-        <label for="textInput">
+                        <label for="textInput">
 
-            Enter URL or Text
+                            Enter URL or Text
 
-        </label>
+                        </label>
 
-        <textarea
-            id="textInput"
-            placeholder="https://example.com or Hello World"
-            rows="5"></textarea>
+                        <textarea
+                            id="textInput"
+                            rows="5"
+                            placeholder="https://example.com or Hello World"></textarea>
 
-    </div>
+                    </div>
 
-    <div class="form-group">
+                    <div class="form-group">
 
-        <label for="sizeSelect">
+                        <label for="sizeSelect">
 
-            QR Size
+                            QR Size
 
-        </label>
+                        </label>
 
-        <select id="sizeSelect">
+                        <select id="sizeSelect">
 
-            <option value="200">200 × 200</option>
+                            <option value="200">200 × 200</option>
 
-            <option value="300" selected>300 × 300</option>
+                            <option value="300" selected>300 × 300</option>
 
-            <option value="400">400 × 400</option>
+                            <option value="400">400 × 400</option>
 
-            <option value="500">500 × 500</option>
+                            <option value="500">500 × 500</option>
 
-        </select>
+                        </select>
 
-    </div>
+                    </div>
 
-    <div class="form-group">
+                    <div class="form-group">
 
-        <label for="foregroundColor">
+                        <label for="foregroundColor">
 
-            Foreground Color
+                            Foreground Color
 
-        </label>
+                        </label>
 
-        <input
-            type="color"
-            id="foregroundColor"
-            value="#000000">
+                        <input
+                            type="color"
+                            id="foregroundColor"
+                            value="#000000">
 
-    </div>
+                    </div>
 
-    <div class="form-group">
+                    <div class="form-group">
 
-        <label for="backgroundColor">
+                        <label for="backgroundColor">
 
-            Background Color
+                            Background Color
 
-        </label>
+                        </label>
 
-        <input
-            type="color"
-            id="backgroundColor"
-            value="#ffffff">
+                        <input
+                            type="color"
+                            id="backgroundColor"
+                            value="#ffffff">
 
-    </div>
+                    </div>
 
-    <div class="button-group">
+                    <div class="button-group">
 
-        <button id="generateBtn">
+                        <button id="generateBtn">
 
-            Generate QR
+                            Generate QR
 
-        </button>
+                        </button>
 
-        <button id="clearBtn">
+                        <button id="clearBtn">
 
-            Clear
+                            Clear
 
-        </button>
+                        </button>
 
-    </div>
+                    </div>
 
-</div>
+                </div>
 
             </section>
 
-          
+           
 
             <section class="preview">
 
+                <div class="card">
 
-<div class="card">
+                    <h2>QR Preview</h2>
 
-    <h2>QR Preview</h2>
+                    <div id="qrPreview"
+                         class="qr-preview">
 
-    <div id="qrPreview"
-         class="qr-preview">
+                        <p>Your QR Code will appear here.</p>
 
-        <p>
+                    </div>
 
-            Your QR Code will appear here.
+                    <p id="message"
+                       class="message">
 
-        </p>
+                        No QR Code Generated
 
-    </div>
+                    </p>
 
-    <p id="message"
-       class="message">
+                    <button id="downloadBtn">
 
-        No QR Code Generated
+                        Download PNG
 
-    </p>
+                    </button>
 
-    <button id="downloadBtn">
-
-        Download PNG
-
-    </button>
-
-</div>
+                </div>
 
             </section>
 
@@ -171,8 +160,7 @@
 
     </main>
 
-    <script type="module"
-            src="js/script.js"></script>
+    <script type="module" src="/src/main.js"></script>
 
 </body>
 

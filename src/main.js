@@ -1,3 +1,5 @@
+import "./style.css";
+
 import { isValidInput } from "./utils/validation.js";
 import { generateQRCode } from "./services/qrService.js";
 
@@ -19,6 +21,12 @@ generateBtn.addEventListener("click", async() => {
 
     const input = textInput.value;
 
+    const size = sizeSelect.value;
+
+    const dark = foregroundColor.value;
+
+    const light = backgroundColor.value;
+
 
     if (!isValidInput(input)) {
 
@@ -33,7 +41,12 @@ generateBtn.addEventListener("click", async() => {
     try {
 
 
-        const qrCode = await generateQRCode(input);
+        const qrCode = await generateQRCode(
+            input,
+            size,
+            dark,
+            light
+        );
 
 
         qrPreview.innerHTML = `
